@@ -12,6 +12,9 @@ class PartitionDosEnv:
         "boot_pri",
         "pre_alloc",
         "boot_blocks",
+        "surfaces",
+        "sec_per_blk",
+        "blk_per_trk",
     )
 
     # size of full dos env (with baud, control, boot_blocks)
