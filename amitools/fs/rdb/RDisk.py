@@ -702,7 +702,7 @@ class RDisk:
         if pid == 0:
             self.rdb.part_list = next
         else:
-            last_pb = self.parts[-1]
+            last_pb = self.parts[pid - 1]
             last_pb.part_blk.next = next
             last_pb.write()
         # free block
@@ -767,7 +767,7 @@ class RDisk:
         if fid == 0:
             self.rdb.fs_list = next
         else:
-            last_fs = self.fs[-1]
+            last_fs = self.fs[fid - 1]
             last_fs.fshd.next = next
             last_fs.write()
         # free block
